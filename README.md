@@ -54,7 +54,7 @@ classDiagram
 
     %% Composition relationship (강한 연관)
 
-    Invoice \*-- Company : composition
+    Invoice *-- Company : composition
 
  
 

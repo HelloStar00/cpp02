@@ -5,7 +5,8 @@ using namespace std;
 class Pokemon {
 public:
 	Pokemon() { cout << "Default(Pokemon) constructor\n"; }
-	~Pokemon() { cout << "부모클래스(포켓몬) 소멸자\n"; }
+	// 상속 관계에서 소멸자 앞에 virtual은 굉장히 중요하다.
+	virtual ~Pokemon() { cout << "부모클래스(포켓몬) 소멸자\n"; }
 	virtual void attack() const { cout << "attack" << endl; }
 };
 
@@ -13,7 +14,8 @@ class Picachu : public Pokemon	// is-a
 {
 public:
 	Picachu() { cout << "Default(Picachu) constructor\n"; }
-	~Picachu() { cout << "자식클래스(피카츄) 소멸자\n"; }
+	// 자식 클래스 소멸자에서는 virtual이 굉장히 중요하다.
+	virtual ~Picachu() { cout << "자식클래스(피카츄) 소멸자\n"; } 
 	virtual void attack() const { cout << "electric attack" << endl; }
 };
 

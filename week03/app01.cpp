@@ -4,12 +4,16 @@ using namespace std;
 
 class Pokemon {
 public:
+	Pokemon() { cout << "Default(Pokemon) constructor\n"; }
+	~Pokemon() { cout << "부모클래스(포켓몬) 소멸자\n"; }
 	virtual void attack() const { cout << "attack" << endl; }
 };
 
 class Picachu : public Pokemon	// is-a
 {
 public:
+	Picachu() { cout << "Default(Picachu) constructor\n"; }
+	~Picachu() { cout << "자식클래스(피카츄) 소멸자\n"; }
 	virtual void attack() const { cout << "electric attack" << endl; }
 };
 
@@ -35,5 +39,6 @@ int main() {
 
 /*
 	virtual 추가 후 출력:
-
+	attack
+	electric attack
 */

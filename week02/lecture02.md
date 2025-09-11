@@ -100,32 +100,6 @@ classDiagram
 
     }
 
-
-
- 
-
-
-
-    %% Composition relationship (강한 연관)
-
-
-
-    Invoice \*-- Company : composition
-
-
-
- 
-
-
-
-    %% Dependency relationship (의존)
-
-
-
-    Invoice ..> Product : uses
-
-
-
 ```
 
 
